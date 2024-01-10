@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'main/img/icon.png' %}"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    {% block links %}{% endblock %}
+</head>
+<body>
+    <div class="body-container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+              <svg class="bi me-2" width="40" height="32"></svg>
+              <img class="header-icon" src="{% static 'main/svg/icon.svg' %}" alt="">
+              <span class="fs-4">Something</span>
+            </a>
+      
+            <ul class="nav nav-pills">
+              <li class="nav-item"><a href="{% url 'main' %}" id="main-nav-link" class="nav-link active" aria-current="page">Home</a></li>
+              <li class="nav-item"><a href="{% url 'create-post' %}" id="create-post-nav-link" class="nav-link">Create post</a></li>
+              <li class="nav-item"><a href="https://github.com/IHateModernity" target="_blank" class="nav-link">Git</a></li>
+              <li class="nav-item"><a href="https://www.linkedin.com/in/mark-semikhov/" target="_blank" class="nav-link">LinkedIn</a></li>
+              <li class="nav-item"><a href="https://www.projectm.space/" target="_blank" class="nav-link">Other Django Projects</a></li>
+            </ul>
+        </header>
+        {% block content %}{% endblock %}
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-body-secondary">© 2024 Something Inc</p>
+        
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img class="header-icon" src="{% static 'main/svg/icon.svg' %}" alt="">
+            </a>
+        
+            <ul class="nav col-md-4 justify-content-end">
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+              <li class="nav-item"><a href="https://github.com/IHateModernity" target="_blank" class="nav-link px-2 text-body-secondary">Git</a></li>
+              <li class="nav-item"><a href="https://www.linkedin.com/in/mark-semikhov/" target="_blank" class="nav-link px-2 text-body-secondary">LinkedIn</a></li>
+            </ul>
+          </footer>
+    </div>
+</body>
+</html>

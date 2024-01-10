@@ -1,0 +1,28 @@
+.form-box {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.form-line {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    min-width: 120%;
+
+    padding: 10px;
+
+}
+
+.form-line input, .form-line textarea {
+    max-width: 70%;
+}
+
+.form-line textarea {
+    min-height: 100px;
+}
+
+.btn-success {
+    width: 100%;
+}
+
